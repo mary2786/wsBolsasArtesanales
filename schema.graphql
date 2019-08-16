@@ -1,0 +1,5 @@
+scalar Upload #Para subir archivos
+
+type Mutation{
+    addPhoto(photo:Upload!):String
+}
