@@ -26,7 +26,9 @@ const {addPhoto} = require('./controllers/multimedia');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-
+app.get('/', (req, res) => {
+    res.send('<h1>Hola Mundo</h1>');
+});
 app.post('/Design', createDesign);
 app.post('/Size', createSize);
 app.post('/Bag', createBag);
