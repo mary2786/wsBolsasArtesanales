@@ -1,4 +1,4 @@
-require('dotenv').config()
+//require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
@@ -29,6 +29,7 @@ app.use(bodyParser.json())
 app.get('/', (req, res) => {
     res.send('<h1>Hola Mundo</h1>');
 });
+
 app.post('/Design', createDesign);
 app.post('/Size', createSize);
 app.post('/Bag', createBag);
