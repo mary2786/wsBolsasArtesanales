@@ -2,10 +2,6 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const { user } = require('../models/user');
 
- // se debe de llamar igual al objeto const user = mongoose.model('Users', User); del modelo
-//const NombreVariable = require('./models/user').user; // Otra forma de hacer lo de la línea anterior
-/*const jwt = require('../services/jwt');*/
-
 exports.login = (req, res)=>{
     let params = req.body;
 
@@ -23,7 +19,7 @@ exports.login = (req, res)=>{
 
                     if(resp){
                         response.password = ':(';
-                        res.status(201).json({status:'OK', data: response/*, token: jwt.createToken(response)*/});
+                        res.status(201).json({status:'OK', data: response});
                     }else{
                         res.status(400).json({message: 'Usuario y/o contraseña incorrectos'});
                     }
