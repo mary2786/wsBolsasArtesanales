@@ -1,15 +1,12 @@
-require('dotenv').config()
+//require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser')
-var graphqlHTTP = require('express-graphql');
-var { buildSchema } = require('graphql');
 const mongoose = require('mongoose');
 const {cloudinaryConfig} =  require('./utils/cloudinaryConfig');
 
 const {multerUpload} = require('./middlewares/multerUpload');
-
 const PORT = process.env.PORT;
-//const verify = require('./middlewares/verifyToken');
+
 const cors = require('cors')
 const app = express();
 app.use('*',cloudinaryConfig);
